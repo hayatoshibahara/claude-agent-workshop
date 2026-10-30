@@ -1,0 +1,300 @@
+/* @theme claude-community */
+/*
+ * slide/[TEMPLATE] Claude Community event deck_.pptx を Marp に写したテーマ。
+ * 寸法は PPTX（10 × 5.625 インチ）を 1280 × 720px に換算した（1 インチ = 128px、1pt ≒ 1.78px）。
+ * 和文は Lora・Poppins にないので、見出しも本文も Noto Sans JP で補う。
+ *
+ * レイアウト（<!-- _class: ... --> で選ぶ）
+ *   cover          表紙（テンプレートの 1 枚目）
+ *   opener         地球儀のアニメーション（3 枚目）
+ *   bare           左下の CLAUDE COMMUNITY を出さない（全面の画像の 2 枚目）
+ *   divider        章の扉。橙（4・10・13〜16 枚目）。`divider light` で生成り（9 枚目）
+ *   agenda         左に見出し、右に箇条書き（5 枚目）
+ *   split          左に見出しと本文、右に画像。> の行が画像のキャプション（6〜8・12 枚目）
+ *   split wide     split の左の列を広げたもの。和文の箇条書きと、画面のスクリーンショット向け（テンプレートにはない）
+ *   flow           見出しと箇条書きの下に、画面を → でつないで横に並べる。幅は ![w:300](…) で画像ごとに指定する（テンプレートにはない）
+ *   cards          見出しと、番号つきのカード（11 枚目）。1. の箇条書きがカードになる
+ *   （指定なし）   見出しと本文（マスター）
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;600&family=Noto+Sans+JP:wght@400;500;600&display=swap');
+
+:root {
+  --orange: #d97757;
+  --ivory: #faf9f5;
+  --ink: #141413;
+  --gray: #b0aea5;
+  --card: #e8e6dc;
+  --serif: 'Lora', 'Noto Sans JP', sans-serif;
+  --sans: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  box-sizing: border-box;
+  padding: 64px 64px 96px;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 26px;
+  line-height: 1.6;
+  position: relative;
+  display: block;
+}
+
+/* 左下の CLAUDE COMMUNITY と、右下のページ番号 */
+section::before {
+  content: 'CLAUDE COMMUNITY';
+  position: absolute;
+  left: 64px;
+  bottom: 40px;
+  font: 600 14px/1 var(--sans);
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+}
+section::after {
+  position: absolute;
+  right: 64px;
+  bottom: 40px;
+  padding: 0; /* marp の既定は padding: inherit で、スライドの余白の分ずれる */
+  font: 400 14px/1 var(--sans);
+  opacity: 0.55;
+}
+section.bare::before,
+section.cover::before,
+section.opener::before {
+  content: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 32px;
+}
+h1 { font-size: 46px; }
+h2 { font-size: 34px; }
+h3 { font-size: 28px; }
+
+p, ul, ol, table, pre, blockquote { margin: 0 0 20px; }
+ul, ol { padding-left: 1.2em; }
+li { margin: 0.2em 0; }
+li::marker { color: var(--orange); }
+strong { font-weight: 600; }
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+code {
+  font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--card);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+}
+pre {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; }
+
+table {
+  border-collapse: collapse;
+  font-size: 22px;
+  line-height: 1.45;
+}
+th, td {
+  border-bottom: 1px solid var(--gray);
+  padding: 8px 16px 8px 0;
+  text-align: left;
+  vertical-align: top;
+}
+th:first-child, td:first-child { white-space: nowrap; }
+th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--ink);
+}
+
+/* ---- cover: 表紙 ---- */
+section.cover {
+  background:
+    url('image/star.png') 63px 68px / 84px no-repeat,
+    url('image/globe-spin.gif') 795px 170px / 443px no-repeat,
+    var(--orange);
+  color: var(--ivory);
+  padding: 270px 460px 0 74px;
+}
+section.cover > p:first-child {
+  margin: 0 0 20px;
+  font: 600 28px/1.3 var(--sans);
+}
+section.cover h1 {
+  margin: 0 0 0 -7px;
+  font-size: 60px;
+  line-height: 1.25;
+}
+section.cover > p:last-child {
+  position: absolute;
+  left: 74px;
+  top: 618px;
+  margin: 0;
+  font: 400 24px/1.3 var(--sans);
+}
+
+/* ---- opener: 地球儀のアニメーション ---- */
+section.opener {
+  background:
+    url('image/star.png') 599px 68px / 65px no-repeat,
+    url('image/wordmark-arc.png') 361px 161px / 534px no-repeat,
+    url('image/globe-spin.gif') 365px 177px / 534px no-repeat,
+    var(--orange);
+}
+
+/* ---- divider: 章の扉 ---- */
+section.divider {
+  background: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 64px 118px;
+}
+section.divider.light { background: var(--ivory); }
+section.divider > p {
+  font: 600 28px/1.3 var(--sans);
+  margin: 0 0 24px;
+}
+section.divider h1 {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.2;
+  margin: 0;
+}
+section.divider.light h1 { font-weight: 500; }
+
+/* ---- agenda: 左に見出し、右に箇条書き ---- */
+section.agenda {
+  display: grid;
+  grid-template-columns: 369px 1fr;
+  column-gap: 87px;
+  align-content: start;
+}
+section.agenda h1 { font-size: 57px; margin: 0; }
+section.agenda ul,
+section.agenda ol {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 0;
+}
+section.agenda ul ul { font-size: 26px; list-style: circle; }
+
+/* ---- split: 左に見出しと本文、右に画像 ---- */
+section.split { padding: 70px 847px 96px 64px; }
+section.split h1 { font-size: 46px; margin: 0 0 24px; }
+section.split > p:has(> img) {
+  position: absolute;
+  left: 456px;
+  top: 207px;
+  width: 760px;
+  height: 426px;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card);
+}
+section.split > p:has(> img) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+section.split > blockquote {
+  position: absolute;
+  left: 456px;
+  top: 643px;
+  width: 760px;
+  margin: 0;
+  font-size: 20px;
+  color: #5e5d59;
+}
+section.split > blockquote p { margin: 0; }
+
+/* split wide: 左の列を広げ、画像は切らずに収めて余白を黒で塗る */
+section.split.wide { padding-right: 696px; }
+section.split.wide > p:has(> img) {
+  left: 624px;
+  top: 150px;
+  width: 592px;
+  height: 400px;
+  background: var(--ink);
+}
+section.split.wide > p:has(> img) img { object-fit: contain; }
+section.split.wide > blockquote { left: 624px; top: 560px; width: 592px; font-size: 18px; }
+
+/* ---- cards: 見出しと、番号つきのカード ---- */
+section.cards { text-align: center; }
+section.cards h1 { margin: 0 0 8px; }
+section.cards > p { font-family: var(--serif); font-size: 24px; margin: 0 0 32px; }
+section.cards ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 23px;
+  text-align: center;
+}
+section.cards ol > li {
+  background: var(--card);
+  border-radius: 16px;
+  min-height: 300px;
+  margin: 0;
+  padding: 36px 24px 28px;
+  font-size: 22px;
+  line-height: 1.5;
+  counter-increment: card;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.cards ol > li::before {
+  content: counter(card, decimal-leading-zero);
+  font: 600 36px/1 var(--sans);
+  margin-bottom: 16px;
+}
+section.cards ol > li strong {
+  display: block;
+  font: 600 26px/1.3 var(--sans);
+  margin-bottom: 12px;
+}
+section.cards ol > li img { width: 96px; margin-bottom: 12px; }
+
+/* ---- flow: 画面を → でつないで横に並べる ---- */
+section.flow > p:has(> img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 40px;
+  color: var(--orange);
+  margin-top: 8px;
+}
+section.flow > p:has(> img) img { border-radius: 12px; }
+
+/* ---- コードの色分け（marp が出す highlight.js のクラス）。テンプレートの色に合わせる ---- */
+pre code .hljs-keyword, pre code .hljs-built_in { color: #c0563b; font-weight: 600; }
+pre code .hljs-string { color: #5f7a3f; }
+pre code .hljs-comment { color: #8a887f; font-style: italic; }
+pre code .hljs-title, pre code .hljs-title.function_, pre code .hljs-params { color: #2f5f8f; }
+pre code .hljs-number, pre code .hljs-literal { color: #9a5a9a; }
+pre code .hljs-attr, pre code .hljs-variable { color: var(--ink); }

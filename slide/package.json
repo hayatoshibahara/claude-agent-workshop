@@ -1,0 +1,15 @@
+{
+  "name": "claude-agent-workshop-slide",
+  "private": true,
+  "scripts": {
+    "serve": "marp --server --host 0.0.0.0 --port 8080 .",
+    "html": "marp --no-stdin slide.md -o export/slide.html",
+    "pdf": "marp --no-stdin slide.md --pdf -o export/slide.pdf",
+    "pptx": "marp --no-stdin slide.md --pptx -o export/slide.pptx",
+    "png": "marp --no-stdin slide.md --images png -o export/png/slide.png",
+    "build": "marp --no-stdin slide.md -o ../_site/index.html && mkdir -p ../_site && cp -r image figure ../_site/"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1"
+  }
+}
