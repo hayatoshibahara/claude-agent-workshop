@@ -3,6 +3,7 @@
 ## Slides
 
 - [日本語版スライド資料](https://hayatoshibahara.github.io/claude-agent-workshop/)
+- [English slides](https://hayatoshibahara.github.io/claude-agent-workshop/en.html)
 
 ## GitHub Codespaces
 

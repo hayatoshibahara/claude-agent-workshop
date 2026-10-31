@@ -234,7 +234,7 @@ section > p:has(> img) img { width: 100%; display: block; border-radius: 16px; }
 # 任意：GitHub Codespaces にキーを設定
 
 - **Google Chrome** で開く。Safari は不具合が出る
-- リポジトリの ![h:40](image/setup/open-in-codespaces.png) を押す
+- [リポジトリ](https://github.com/hayatoshibahara/claude-agent-workshop)の ![h:40](image/setup/open-in-codespaces.png) を押す
 - **ANTHROPIC_API_KEY** に、手順 4 でコピーした API キーを貼る
 - **Create codespace** を押す
 
