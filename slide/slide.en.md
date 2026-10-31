@@ -602,6 +602,7 @@ ul { font-size: 22px; line-height: 1.55; }
 
 ![figure](figure/single-harness.en.drawio.svg)
 
+- A **harness** is the setup people prepare so a model can do its work
 - The agent works inside **a harness designed by people**
 - One agent is fine, and so are **several in a row**
 - You can add a reviewer that **sends work back** when it falls short
