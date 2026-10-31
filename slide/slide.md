@@ -140,9 +140,9 @@ section > p:has(> img) {
 section > p:has(> img) img { height: 400px; border-radius: 12px; }
 </style>
 
-# 2. 組織 ID を確認（新UIでは不要）
+# 2. 組織を作成・確認（旧UIでは、組織IDも必要）
 
-- **設定 → 組織** を開き、**組織 ID** をコピーする
+- **設定 → 組織** で組織名・住所を入力する（旧UIでは**組織 ID** もコピー）
 
 ![](image/setup/menu-settings.png) → ![](image/setup/settings-organization.png) → ![](image/setup/organization-id.png)
 

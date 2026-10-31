@@ -141,9 +141,9 @@ section > p:has(> img) {
 section > p:has(> img) img { height: 400px; border-radius: 12px; }
 </style>
 
-# 2. Check your organization ID (old UI only)
+# 2. Create or check your organization (old UI also needs the organization ID)
 
-- Open **Settings → Organization** and copy the **Organization ID**
+- In **Settings → Organization**, enter your organization name and address (in the old UI, also copy the **Organization ID**)
 
 ![](image/setup/menu-settings.png) → ![](image/setup/settings-organization.png) → ![](image/setup/organization-id.png)
 
