@@ -72,8 +72,8 @@ section > p:has(> img) img { object-fit: contain; }
 ---
 
 <style scoped>
-a.post { display: inline-flex; align-items: center; gap: 20px; margin: 12px 0 40px; color: var(--ink); text-decoration: none; }
-a.post span { font: 600 44px/1.3 var(--sans); color: var(--orange); }
+p.post { margin: 12px 0 40px; font: 600 38px/1.3 var(--sans); }
+p.post a { color: var(--orange); text-decoration: none; }
 ul { font-size: 28px; line-height: 1.6; }
 section { padding-right: 460px; }
 img[alt="qr"] { position: absolute; right: 64px; top: 160px; width: 340px; padding: 20px; background: #fff; border-radius: 16px; }
@@ -83,7 +83,7 @@ img[alt="qr"] { position: absolute; right: 64px; top: 160px; width: 340px; paddi
 
 SNS 投稿のハッシュタグは、次の 2 つを使ってください
 
-<a class="post" href="https://x.com/intent/post?hashtags=ClaudeCommunity,ClaudeCommunityFukuoka"><span>#ClaudeCommunity<br>#ClaudeCommunityFukuoka</span></a>
+<p class="post"><a href="https://x.com/intent/tweet?text=%23ClaudeCommunityEvent%20%23ClaudeCommunityEventFukuoka">#ClaudeCommunityEvent</a><br><a href="https://x.com/intent/tweet?text=%23ClaudeCommunityEvent%20%23ClaudeCommunityEventFukuoka">#ClaudeCommunityEventFukuoka</a></p>
 
 ![qr](image/qr/x-post.png)
 
