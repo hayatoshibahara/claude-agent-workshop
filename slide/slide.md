@@ -75,6 +75,8 @@ section > p:has(> img) img { object-fit: contain; }
 a.post { display: inline-flex; align-items: center; gap: 20px; margin: 12px 0 40px; color: var(--ink); text-decoration: none; }
 a.post span { font: 600 44px/1.3 var(--sans); color: var(--orange); }
 ul { font-size: 28px; line-height: 1.6; }
+section { padding-right: 460px; }
+img[alt="qr"] { position: absolute; right: 64px; top: 160px; width: 340px; padding: 20px; background: #fff; border-radius: 16px; }
 </style>
 
 # Share on SNS
@@ -82,6 +84,8 @@ ul { font-size: 28px; line-height: 1.6; }
 SNS 投稿のハッシュタグは、次の 2 つを使ってください
 
 <a class="post" href="https://x.com/intent/post?hashtags=ClaudeCommunity,ClaudeCommunityFukuoka"><span>#ClaudeCommunity<br>#ClaudeCommunityFukuoka</span></a>
+
+![qr](image/qr/x-post.png)
 
 - 写真・動画の投稿は大歓迎です！盛り上げてください
 - 参加者と登壇者には配慮してください
