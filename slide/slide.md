@@ -386,7 +386,7 @@ blockquote p { margin: 0; }
 
 > 福岡市オープンデータ（[https://odcs.bodik.jp/401307/](https://odcs.bodik.jp/401307/)）からデータを探し、グラフ画像を作成するエージェント
 
-<div class="quick">※時間がない時は「Open-Meteo から天気を取得するエージェント」を入力して送信</div>
+<div class="quick">※時間がない時は「Open-Meteo から天気を取得する最小構成のエージェント」を入力して送信</div>
 
 ![h:200](image/managed/menu-agents.png) → ![h:200](image/managed/agents-create.png) → ![w:560](image/managed/create-prompt.png)
 
@@ -460,7 +460,7 @@ img[alt="reload"] { position: absolute; right: 64px; top: 410px; width: 580px; b
 
 > Claude Agent SDK を使って次のエージェントの対話型ウェブアプリを作って：福岡市オープンデータ（[https://odcs.bodik.jp/401307/](https://odcs.bodik.jp/401307/)）からデータを探し、グラフ画像を作成するエージェント
 
-<div class="quick">※時間がない時は「Claude Agent SDK を使って、Open-Meteo から天気を取得する対話型ウェブアプリを作って」を入力して送信</div>
+<div class="quick">※時間がない時は「Claude Agent SDK を使って、Open-Meteo から天気を取得する最小構成のウェブアプリを作って」を入力して送信</div>
 
 ![prompt](image/sdk/claude-code-prompt.png)
 ![reload](image/sdk/reload-window.png)

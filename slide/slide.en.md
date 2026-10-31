@@ -387,7 +387,7 @@ blockquote p { margin: 0; }
 
 > An agent that finds data in Fukuoka City Open Data ([https://odcs.bodik.jp/401307/](https://odcs.bodik.jp/401307/)) and creates chart images
 
-<div class="quick">* Short on time? Send "An agent that gets the weather from Open-Meteo" instead</div>
+<div class="quick">* Short on time? Send "A minimal agent that gets the weather from Open-Meteo" instead</div>
 
 ![h:200](image/managed/menu-agents.png) → ![h:200](image/managed/agents-create.png) → ![w:560](image/managed/create-prompt.png)
 
@@ -462,7 +462,7 @@ img[alt="reload"] { position: absolute; right: 64px; top: 410px; width: 580px; b
 
 > Use the Claude Agent SDK to build an interactive web app for this agent: an agent that finds data in Fukuoka City Open Data ([https://odcs.bodik.jp/401307/](https://odcs.bodik.jp/401307/)) and creates chart images
 
-<div class="quick">* Short on time? Send "Use the Claude Agent SDK to build an interactive web app that gets the weather from Open-Meteo" instead</div>
+<div class="quick">* Short on time? Send "Use the Claude Agent SDK to build a minimal web app that gets the weather from Open-Meteo" instead</div>
 
 ![prompt](image/sdk/claude-code-prompt.png)
 ![reload](image/sdk/reload-window.png)
